@@ -3,7 +3,7 @@
 <head>
 <title>episode</title>
 </head>
-<body>
+<body onload="getAllShows();">
 
 
 
@@ -25,7 +25,13 @@ xhttp.send();
 }
 
 function getAllShows() {
-
+    var x = document.getElementsByClassName("tvshow");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      show = x[i].getAttribute('data-tvshow');
+      data=getShowData(show);
+      x[i].innerHTML = data;
+    }
 }
 
 
