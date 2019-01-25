@@ -2,30 +2,22 @@
 <html>
 <head>
 <title>episode</title>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg .tg-6z2b{background-color:#dae8fc;color:#343434;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-0kyj{background-color:#dae8fc;color:#343434;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
 </head>
 <body onload="getAllShows()">
 
-
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
 
 <script>
 var showDetailsUrl = 'https://www.episodate.com/api/show-details?q=';
-
-
-function getShowData(class, show) {
-url = showDetailsUrl + show;
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       // Typical action to be performed when the document is ready:
-       //return xhttp.responseText;
-        alert(class);
-        alert(xhttp.responseText);
-        class.innerHTML = xhttp.responseText;
-    }
-};
-xhttp.open("GET", url, true);
-xhttp.send();
-}
 
 function getAllShows() {
     var x = document.getElementsByClassName("tvshow");
@@ -34,11 +26,80 @@ function getAllShows() {
       show = x[i].getAttribute('data-tvshow');
       getShowData(x[i], show);
     }
+} 
+    
+function yyyymmdd() {
+    var x = new Date();
+    var y = x.getFullYear().toString();
+    var m = (x.getMonth() + 1).toString();
+    var d = x.getDate().toString();
+    (d.length == 1) && (d = '0' + d);
+    (m.length == 1) && (m = '0' + m);
+    var yyyymmdd = y+"-"+m+"-"+d;
+    return yyyymmdd;
 }
 
+function getShowData(dims, show) {
+url = showDetailsUrl + show;
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	json = JSON.parse(xhttp.responseText).tvShow;
+    	season = ("00"+json.countdown.season).slice(-2);
+    	episode = ("00"+json.countdown.episode).slice(-2);
+    	next_airdate = json.countdown.air_date;
+    	var future = moment(next_airdate);
+		var start = moment(yyyymmdd());
+		var d = future.diff(start, 'days');
+    	dims.innerHTML = "S"+season+"E"+episode+"&nbsp;&nbsp;&nbsp;"+next_airdate+"&nbsp;&nbsp;&nbsp;"+d+" days till next episode";
 
+        //dims.innerHTML = JSON.parse(xhttp.responseText).tvShow.countdown.air_date;
+    }
+};
+xhttp.open("GET", url, true);
+xhttp.send();
+}
 </script>
+<center>
+<table class="tg">
+  <tr>
+    <th class="tg-6z2b">Arrow</th>
+    <th class="tg-0kyj"><span class="tvshow" data-tvshow="arrow">0000-00-00 00:00:00</span></th>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Supergirl</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="supergirl">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">The Flash</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-flash">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">DC's Legends of Tomorrow</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="dcs-legends-of-tomorrow">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Outlander</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="outlander">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">The Blacklist</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-blacklist">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Billions</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="billions">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Game of Thrones</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="game-of-thrones">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj"></td>
+    <td class="tg-0kyj"></td>
+  </tr>
+</table>
+</center>
 
-Billions <span class="tvshow" data-tvshow="billions"></span>
 </body>
 </html>
