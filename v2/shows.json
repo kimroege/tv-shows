@@ -1,0 +1,254 @@
+var data=[
+  {
+    "name": "Arrow",
+    "id": "arrow", 
+    "jw": "dk/tv-series/arrow", 
+    "imdb": "tt2193021",
+    "tvmaze":"4",
+    "streamingService":"",
+    "episodate": "arrow"
+  },  
+  {
+    "name": "Loki",
+    "id": "loki", 
+    "jw": "dk/tv-series/loi", 
+    "imdb": "tt9140554",
+    "tvmaze":"41007",
+    "streamingService":"https://www.disneyplus.com/favicon.ico",
+    "episodate": "loki"
+  },
+  {
+    "name": "Supergirl",
+    "id": "supergirl", 
+    "jw": "dk/tv-series/supergirl", 
+    "imdb": "tt4016454", 
+    "tvmaze":"1850",
+    "streamingService":"",
+    "episodate": "supergirl"
+  },
+  {
+    "name": "The Flash",
+    "id": "the-flash", 
+    "jw": "dk/tv-series/the-flash", 
+    "imdb": "tt3107288", 
+    "tvmaze":"13",
+    "streamingService":"",
+    "episodate": "the-flash"
+  },
+  {
+    "name": "Batwoman",
+    "id": "batwoman", 
+    "jw": "dk/tv-series/batwoman", 
+    "imdb": "tt8712204", 
+    "tvmaze":"37776",
+    "streamingService":"",
+    "episodate": "batwoman"
+  },
+  {
+    "name": "Superman & Lois",
+    "id": "superman-lois", 
+    "jw": "dk/tv-series/batwoman", 
+    "imdb": "tt11192306", 
+    "tvmaze":"44751",
+    "streamingService":"",
+    "episodate": "superman-lois"
+  },
+  {
+    "name": "Debris",
+    "id": "debris", 
+    "jw": "dk/tv-series/", 
+    "imdb": "tt11640020", 
+    "tvmaze":"45788",
+    "streamingService":"",
+    "episodate": "space-debris"
+  },
+  {
+    "name": "Resident Alien",
+    "id": "resident-alien", 
+    "jw": "dk/tv-series/", 
+    "imdb": "tt8690918", 
+    "tvmaze":"36947",
+    "streamingService":"",
+    "episodate": ""
+  },
+  {
+    "name": "Foundation",
+    "id": "foundation", 
+    "jw": "dk/tv-series/", 
+    "imdb": "tt0804484", 
+    "tvmaze":"35951",
+    "streamingService":"",
+    "episodate": ""
+  },
+  {
+    "name": "Tom Clancy's Jack Ryan",
+    "id": "tom-clancys-jack-ryan", 
+    "jw": "dk/tv-series/tom-clancys-jack-ryan", 
+    "imdb": "tt5057054", 
+    "tvmaze":"5079",
+    "streamingService":"",
+    "episodate": "tom-clancy-s-jack-ryan"
+  },
+  {
+    "name": "DC's Legends of Tomorrow",
+    "id": "dcs-legends-of-tomorrow", 
+    "jw": "dk/tv-series/dcs-legends-of-tomorrow", 
+    "imdb": "tt4532368", 
+    "tvmaze":"1851",
+    "streamingService":"https://www.netflix.com/favicon.ico",
+    "episodate": "dcs-legends-of-tomorrow"
+  },
+  {
+    "name": "Outlander",
+    "id": "outlander", 
+    "jw": "dk/tv-series/outlander", 
+    "imdb": "tt3006802", 
+    "tvmaze":"43",
+    "streamingService":"https://viaplay.dk/favicon.ico",
+    "episodate": "outlander"
+  },
+  {
+    "name": "The Blacklist",
+    "id": "the-blacklist", 
+    "jw": "dk/tv-series/the-blacklist", 
+    "imdb": "tt2741602", 
+    "tvmaze":"69",
+    "streamingService":"https://viaplay.dk/favicon.ico",
+    "episodate": "the-blacklist"
+  },
+  {
+    "name": "Billions",
+    "id": "billions", 
+    "jw": "dk/tv-series/billions", 
+    "imdb": "tt4270492", 
+    "tvmaze":"3606",
+    "streamingService":"",
+    "episodate": "billions"
+  },
+  {
+    "name": "Game of Thrones",
+    "id": "game-of-thrones", 
+    "jw": "dk/tv-series/game-of-thrones", 
+    "imdb": "tt0944947", 
+    "tvmaze":"82",
+    "streamingService":"",
+    "episodate": "game-of-thrones"
+  },
+  {
+    "name": "The Witcher",
+    "id": "the-witcher", 
+    "jw": "dk/tv-series/the-witcher", 
+    "imdb": "tt5180504", 
+    "tvmaze":"28276",
+    "streamingService":"https://www.netflix.com/favicon.ico",
+    "episodate": "the-witcher"
+  },
+  {
+    "name": "His Dark Materials",
+    "id": "his-dark-materials", 
+    "jw": "dk/tv-series/his-dark-materials", 
+    "imdb": "tt5607976", 
+    "tvmaze":"7626",
+    "streamingService":"",
+    "episodate": "his-dark-materials"
+  },
+  {
+    "name": "Star Trek: Discovery",
+    "id": "star-trek-discovery", 
+    "jw": "dk/tv-series/star-trek-discovery", 
+    "imdb": "tt5171438", 
+    "tvmaze":"7480",
+    "streamingService":"https://www.netflix.com/favicon.ico",
+    "episodate": "star-trek-cbs"
+  },
+  {
+    "name": "Star Trek: Strange New Worlds",
+    "id": "star-trek-strange-new-worlds", 
+    "jw": "dk/tv-series/star-trek-strange-new-worlds", 
+    "imdb": "tt12327578", 
+    "tvmaze":"",
+    "streamingService":"",
+    "episodate": "star-trek-strange-new-worlds"
+  },
+  {
+    "name": "The Falcon And The Winter Soldier",
+    "id": "the-falcon-and-the-winter-soldier", 
+    "jw": "dk/tv-series/the-falcon-and-the-winter-soldier", 
+    "imdb": "tt9208876", 
+    "tvmaze":"41749",
+    "streamingService":"https://www.disneyplus.com/favicon.ico",
+    "episodate": "the-falcon-and-the-winter-soldier"
+  },
+  {
+    "name": "The Expanse",
+    "id": "the-expanse", 
+    "jw": "dk/tv-series/the-expanse", 
+    "imdb": "tt3230854", 
+    "tvmaze":"1825",
+    "streamingService":"",
+    "episodate": "the-expanse"
+  },
+  {
+    "name": "Stranger Things",
+    "id": "stranger-things", 
+    "jw": "dk/tv-series/stranger-things", 
+    "imdb": "tt4574334", 
+    "tvmaze":"2993",
+    "streamingService":"https://www.netflix.com/favicon.ico",
+    "episodate": "montauk"
+  },
+  {
+    "name": "The Mandalorian",
+    "id": "the-mandalorian", 
+    "jw": "dk/tv-series/the-mandalorian", 
+    "imdb": "tt8111088", 
+    "tvmaze":"38963",
+    "streamingService":"https://www.disneyplus.com/favicon.ico",
+    "episodate": "the-mandalorian"
+  },
+  {
+    "name": "WandaVision",
+    "id": "wandavision", 
+    "jw": "dk/tv-series/wandavision", 
+    "imdb": "tt9140560",
+    "tvmaze":"41748",
+    "streamingService":"https://www.disneyplus.com/favicon.ico",
+    "episodate": "wandavision"
+  },
+  {
+    "name": "The Boys",
+    "id": "the-boys", 
+    "jw": "dk/tv-series/the-boys", 
+    "imdb": "tt1190634",
+    "tvmaze":"15299",
+    "streamingService":"",
+    "episodate": "the-boys"
+  },
+  {
+    "name": "Westworld",
+    "id": "westworld", 
+    "jw": "dk/tv-series/westworld", 
+    "imdb": "tt0475784",
+    "tvmaze":"1371",
+    "streamingService":"",
+    "episodate": "westworld"
+  },
+  {
+    "name": "The Equalizer",
+    "id": "the-equalizer-2021", 
+    "jw": "dk/tv-series/the-equalizer-2021", 
+    "imdb": "tt11242246",
+    "tvmaze":"47929",
+    "streamingService":"",
+    "episodate": "the-equalizer"
+  },
+  {
+    "name": "Snowpiercer",
+    "id": "snowpiercer", 
+    "jw": "dk/tv-series/snowpiercer",  
+    "imdb": "tt6156584",
+    "tvmaze":"23030",
+    "streamingService":"https://www.netflix.com/favicon.ico",
+    "episodate": "snowpiercer"
+  }
+];
