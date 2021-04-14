@@ -250,5 +250,14 @@ var data=[
     "tvmaze":"23030",
     "streamingService":"https://www.netflix.com/favicon.ico",
     "episodate": "snowpiercer"
+  },
+    {
+    "name": "The Nevers",
+    "id": "the-nevers", 
+    "jw": "dk/tv-series/snowpiercer",  
+    "imdb": "tt8697870/",
+    "tvmaze":"37700",
+    "streamingService":"",
+    "episodate": "the-nevers"
   }
 ];
