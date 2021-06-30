@@ -1,0 +1,177 @@
+<!-- https://www.episodate.com/api/show-details?q=39957 -->
+<html>
+<head>
+<title>episode</title>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg .tg-6z2b{background-color:#dae8fc;color:#343434;border-color:#000000;text-align:left;vertical-align:top}
+.tg .tg-0kyj{background-color:#dae8fc;color:#343434;border-color:inherit;text-align:left;vertical-align:top}
+</style>
+
+</head>
+<body onload="getAllShows()">
+
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+
+<script>
+var showDetailsUrl = 'https://www.episodate.com/api/show-details?q=';
+
+function getAllShows() {
+    var x = document.getElementsByClassName("tvshow");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      show = x[i].getAttribute('data-tvshow');
+      getShowData(x[i], show);
+    }
+    //getTableRow();
+} 
+
+function getTableRow() {
+  var x = document.getElementsByClassName("tablerow");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      console.log(x[i]);
+      x[i].querySelector("th:nth-of-type(1)").innerHTML = x[i].getAttribute('data-name');
+
+      //console.log(x[i].getAttribute('data-name'));
+      //var test = x[i].getAttribute('data-lookup');
+      //var lolo = getShowData2(test);
+      //console.log(lolo);
+      //console.log();
+    }
+    //console.log(document.querySelector("th"));
+}
+    
+function yyyymmdd() {
+    var x = new Date();
+    var y = x.getFullYear().toString();
+    var m = (x.getMonth() + 1).toString();
+    var d = x.getDate().toString();
+    (d.length == 1) && (d = '0' + d);
+    (m.length == 1) && (m = '0' + m);
+    var yyyymmdd = y+"-"+m+"-"+d;
+    return yyyymmdd;
+}
+
+function getShowData2(show) {
+url = showDetailsUrl + show;
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      json = JSON.parse(xhttp.responseText).tvShow;
+       //console.log(json);
+       return json;
+    }
+};
+xhttp.open("GET", url, true);
+xhttp.send();
+}
+
+
+function getShowData(dims, show) {
+url = showDetailsUrl + show;
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	json = JSON.parse(xhttp.responseText).tvShow;
+    	season = ("00"+json.countdown.season).slice(-2);
+    	episode = ("00"+json.countdown.episode).slice(-2);
+    	next_airdate = json.countdown.air_date;
+    	var future = moment(next_airdate);
+		var start = moment(yyyymmdd());
+		var d = future.diff(start, 'days');
+    	dims.innerHTML = "S"+season+"E"+episode+"&nbsp;&nbsp;&nbsp;"+next_airdate+"&nbsp;&nbsp;&nbsp;"+d+" days till next episode";
+
+        //dims.innerHTML = JSON.parse(xhttp.responseText).tvShow.countdown.air_date;
+    }
+};
+xhttp.open("GET", url, true);
+xhttp.send();
+}
+</script>
+<center>
+<table class="tg">
+  <tr class="tablerow" data-name="Arrow2" data-lookup="arrow">
+    <th class="tg-6z2b">Arrow</th>
+    <th class="tg-0kyj"><span class="tvshow" data-tvshow="arrow">0000-00-00 00:00:00</span></th>
+  </tr>
+  <tr class="tablerow" data-name="Supergirl2" data-lookup="supergirl">
+    <td class="tg-0kyj">Supergirl</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="supergirl">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">The Flash</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-flash">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">DC's Legends of Tomorrow</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="dcs-legends-of-tomorrow">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Outlander</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="outlander">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">The Blacklist</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-blacklist">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Billions</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="billions">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Game of Thrones</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="game-of-thrones">0000-00-00 00:00:00</span></td>
+  </tr>
+   <tr>
+    <td class="tg-0kyj">The Witcher</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-witcher">0000-00-00 00:00:00</span></td>
+  </tr>
+   <tr>
+    <td class="tg-0kyj">His Dark Materials</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="his-dark-materials">0000-00-00 00:00:00</span></td>
+  </tr>
+   <tr>
+    <td class="tg-0kyj">Star Trek Discovery</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="star-trek-cbs">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Star Trek: Strange New Worlds</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="star-trek-strange-new-worlds">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">The Falcon And The Winter Soldier</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-falcon-and-the-winter-soldier">0000-00-00 00:00:00</span></td>
+  </tr>
+   <tr>
+    <td class="tg-0kyj">The Expanse</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-expanse">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Stranger Things</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="montauk">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">WandaVision</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="wandavision">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">The Mandalorian</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="the-mandalorian">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj">Snowpiercer</td>
+    <td class="tg-0kyj"><span class="tvshow" data-tvshow="snowpiercer">0000-00-00 00:00:00</span></td>
+  </tr>
+  <tr>
+    <td class="tg-0kyj"></td>
+    <td class="tg-0kyj"></td>
+  </tr>
+</table>
+</center>
+
+</body>
+</html>
