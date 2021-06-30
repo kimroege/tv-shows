@@ -255,9 +255,18 @@ var data=[
     "name": "The Nevers",
     "id": "the-nevers", 
     "jw": "dk/tv-series/snowpiercer",  
-    "imdb": "tt8697870/",
+    "imdb": "tt8697870",
     "tvmaze":"37700",
     "streamingService":"",
     "episodate": "the-nevers"
+  },
+    {
+    "name": "Invasion",
+    "id": "invasion", 
+    "jw": "dk/tv-series/invasion",  
+    "imdb": "tt9737326",
+    "tvmaze":"49964",
+    "streamingService":"",
+    "episodate": "invasion-apple-tv"
   }
 ];
