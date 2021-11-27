@@ -268,5 +268,14 @@ var data=[
     "tvmaze":"49964",
     "streamingService":"",
     "episodate": "invasion-apple-tv"
+  }, 
+      {
+    "name": "Wheel of Time",
+    "id": "wheel-of-time", 
+    "jw": "dk/tv-series/the-wheel-of-time",  
+    "imdb": "tt7462410",
+    "tvmaze":"35083",
+    "streamingService":"",
+    "episodate": "wheel-of-time"
   }
 ];
