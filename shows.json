@@ -268,8 +268,44 @@ var data=[
     "tvmaze":"49964",
     "streamingService":"",
     "episodate": "invasion-apple-tv"
+  },  
+  {
+    "name": "Reacher",
+    "id": "reacher", 
+    "jw": "dk/tv-show/jack-reacher",  
+    "imdb": "tt9288030",
+    "tvmaze":"43031",
+    "streamingService":"",
+    "episodate": "jack-reacher"
+  },   
+  {
+    "name": "The Lord of the Rings",
+    "id": "lotr", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"",
+    "streamingService":"",
+    "episodate": "the-lord-of-the-rings"
   }, 
-      {
+  {
+    "name": "Shadow and Bone",
+    "id": "shadow-and-bone", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"",
+    "streamingService":"",
+    "episodate": "shadow-and-bone"
+  }, 
+  {
+    "name": "The Book of Boba Fett",
+    "id": "the-book-of-boba-fett", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"",
+    "streamingService":"",
+    "episodate": "the-book-of-boba-fett"
+  },
+  {
     "name": "Wheel of Time",
     "id": "wheel-of-time", 
     "jw": "dk/tv-series/the-wheel-of-time",  
