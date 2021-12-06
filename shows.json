@@ -283,7 +283,7 @@ var data=[
     "id": "lotr", 
     "jw": "",  
     "imdb": "",
-    "tvmaze":"",
+    "tvmaze":"33352",
     "streamingService":"",
     "episodate": "the-lord-of-the-rings"
   }, 
@@ -292,7 +292,7 @@ var data=[
     "id": "shadow-and-bone", 
     "jw": "",  
     "imdb": "",
-    "tvmaze":"",
+    "tvmaze":"40370",
     "streamingService":"",
     "episodate": "shadow-and-bone"
   }, 
@@ -301,7 +301,7 @@ var data=[
     "id": "the-book-of-boba-fett", 
     "jw": "",  
     "imdb": "",
-    "tvmaze":"",
+    "tvmaze":"52523",
     "streamingService":"",
     "episodate": "the-book-of-boba-fett"
   },
