@@ -306,6 +306,15 @@ var data=[
     "episodate": "the-book-of-boba-fett"
   },
   {
+    "name": "House of the Dragon",
+    "id": "house-of-the-dragon", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"44778",
+    "streamingService":"",
+    "episodate": "house-of-the-dragon"
+  },
+  {
     "name": "Wheel of Time",
     "id": "wheel-of-time", 
     "jw": "dk/tv-series/the-wheel-of-time",  
