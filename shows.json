@@ -314,6 +314,15 @@ var data=[
     "streamingService":"",
     "episodate": "house-of-the-dragon"
   },
+    {
+    "name": "Halo",
+    "id": "halo", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"35158",
+    "streamingService":"",
+    "episodate": "halo"
+  },
   {
     "name": "Wheel of Time",
     "id": "wheel-of-time", 
