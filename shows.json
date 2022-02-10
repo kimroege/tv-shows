@@ -314,7 +314,7 @@ var data=[
     "streamingService":"",
     "episodate": "house-of-the-dragon"
   },
-    {
+  {
     "name": "Halo",
     "id": "halo", 
     "jw": "",  
@@ -322,6 +322,15 @@ var data=[
     "tvmaze":"35158",
     "streamingService":"",
     "episodate": "halo"
+  },
+  {
+    "name": "Halo",
+    "id": "Obi-Wan Kenobi", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"52260",
+    "streamingService":"",
+    "episodate": "obi-wan-kenobi"
   },
   {
     "name": "Wheel of Time",
