@@ -324,8 +324,8 @@ var data=[
     "episodate": "halo"
   },
   {
-    "name": "Halo",
-    "id": "Obi-Wan Kenobi", 
+    "name": "Obi-Wan Kenobi",
+    "id": "obi-wan-kenobi", 
     "jw": "",  
     "imdb": "",
     "tvmaze":"52260",
