@@ -332,6 +332,15 @@ var data=[
     "streamingService":"",
     "episodate": "obi-wan-kenobi"
   },
+    {
+    "name": "The Winter King",
+    "id": "45906", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"45906",
+    "streamingService":"",
+    "episodate": ""
+  },
   {
     "name": "Wheel of Time",
     "id": "wheel-of-time", 
