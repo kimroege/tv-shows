@@ -342,6 +342,15 @@ var data=[
     "episodate": ""
   },
   {
+    "name": "The White Lotus",
+    "id": "51394", 
+    "jw": "",  
+    "imdb": "",
+    "tvmaze":"51394",
+    "streamingService":"",
+    "episodate": ""
+  },
+  {
     "name": "Wheel of Time",
     "id": "wheel-of-time", 
     "jw": "dk/tv-series/the-wheel-of-time",  
